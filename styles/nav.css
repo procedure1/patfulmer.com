@@ -1,0 +1,151 @@
+/* CSS Document */
+
+h1, h2, h3, h4 {
+	font-weight:normal;
+}
+p {
+	font-weight: 300;
+}
+.current {
+    /*padding: 4%;*/
+    /* [disabled]margin: 0 auto; *//*not centered without this?*/
+    background-color: lightgray;
+    color: white;
+}
+a {
+	color:black;
+	text-decoration:none;
+	font-family: '__Nueva Std_3';
+	font-size:2em;
+	margin: 0;
+}
+li a {
+	margin: 0 .5em;
+	color: gray;
+}
+a:hover {
+    opacity: 0.5;
+    filter: alpha(opacity=50); /* For IE8 and earlier */
+	color: gray;
+}
+a.current:hover {
+    opacity: 1;
+    filter: alpha(opacity=100); /* For IE8 and earlier */
+	color: white;
+	cursor:default;
+}
+a.siteTitle:hover {
+	opacity: 1;
+    filter: alpha(opacity=100); /* For IE8 and earlier */
+	color:inherit;
+}
+h1, h2{
+	text-align:center !important;
+}
+h1 {
+	font-size:4.5em;
+	/*color: white;*/
+	margin: 0;
+	/*text-shadow: 3px 4px 13px rgba(0, 0, 0, 1);*/
+}
+h2 {
+	font-size:2.5em;
+	margin: .1em 0;
+}
+h3 {
+	font-size:2em;
+}
+.nav {
+	list-style: none;
+}
+ul {
+	padding: 0;
+	margin:-1.5em 0 0;
+}
+li {
+	display: inline-block;
+	margin: .5em 0;
+}
+#menuIcon {
+	display:none;
+	width: .8em;
+	height: .6em;
+	background: white url(../images/menu-icon.svg) center no-repeat;
+	background-size:cover;
+	position:absolute;
+	top: .8em;
+	left: .35em;
+}
+/*a:hover #menuIcon {
+	opacity: 0.5;
+    filter: alpha(opacity=50);
+}*/
+
+@media only screen and (max-width : 517px) {
+	h1 {
+		margin: 0 0 -.2em 0;
+	}
+	#menuIcon {
+		display:inline-block;
+	}
+	#navDiv {
+		position: absolute;
+		width: 10%;/*larger than with of screen if use 100% for some reason so not centered*/
+		height: 5%;/*want this to have some size so curser can go to menu without it dropping out*/
+		left:0;
+		top: 0;
+		/*background: rgba(0,0,0,.4);
+		border-color:black;
+		border-style:double;*/
+	}
+	nav #navDiv, nav:active #navDiv { 
+		display: none;
+		z-index:100;
+	}
+	#navDiv ul {
+		display: inline-block;/*centers it!?*/
+		margin-top: 20%;
+		padding: 1%;
+		background: rgba(255,255,255,.95);
+		width: 600%;
+		border-radius: 4px 4px 4px 4px;
+		box-shadow: 2px 2px 20px rgba(0,0,0,.5);
+		
+	}
+	nav li {
+		text-align: center;
+		width: 100%;
+		padding: 10px 0;
+		margin: 0;
+	}
+	nav li a{
+		color: black;
+	}
+	nav:hover #navDiv {
+		display: block;
+	}
+
+	/*didn't work
+	nav:hover + main {
+		pointer-events: none;
+	}*/
+}
+@media only screen and (max-width: 400px){
+	h1 {
+		font-size:3.2em;
+	}
+	#menuIcon {
+		top: .5em;
+	}
+}
+/*too small to make it 1 column*/
+/*@media screen and (orientation:portrait) and (max-width:550px){
+	.imageSet {
+		width:96%;
+		margin: 2%;
+		
+	}
+	.inner1 {
+		max-width: 500px;
+	}
+}*/
